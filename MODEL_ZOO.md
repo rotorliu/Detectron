@@ -13,7 +13,7 @@ This file documents a large collection of baselines trained with Detectron, prim
 - All models were trained on the union of `coco_2014_train` and `coco_2014_valminusminival`, which is exactly equivalent to the recently defined `coco_2017_train` dataset.
 - All models were tested on the `coco_2014_minival` dataset, which is exactly equivalent to the recently defined `coco_2017_val` dataset.
 - Inference times are often expressed as "*X* + *Y*", in which *X* is time taken in reasonably well-optimized GPU code and *Y* is time taken in unoptimized CPU code. (The CPU code time could be reduced substantially with additional engineering.)
-- Inference results for boxes, masks, and keypoints ("kps") are provided in the [COCO json format](http://cocodataset.org/#format).
+- Inference results for boxes, masks, and keypoints ("kps") are provided in the [COCO json format](http://cocodataset.org/#format-data).
 - The *model id* column is provided for ease of reference.
 - To check downloaded file integrity: for any download URL on this page, simply append `.md5sum` to the URL to download the file's md5 hash.
 - All models and results below are on the [COCO dataset](http://cocodataset.org).
@@ -37,11 +37,15 @@ All models available for download through this document are licensed under the [
 
 The backbone models pretrained on ImageNet are available in the format used by Detectron. Unless otherwise noted, these models are trained on the standard ImageNet-1k dataset.
 
-- [R-50.pkl](https://s3-us-west-2.amazonaws.com/detectron/imNetPretrained/MSRA/R-50.pkl): converted copy of MSRA's original ResNet-50 model
-- [R-101.pkl](https://s3-us-west-2.amazonaws.com/detectron/imNetPretrained/MSRA/R-101.pkl): converted copy of MSRA's original ResNet-101 model
-- [X-101-64x4d.pkl](https://s3-us-west-2.amazonaws.com/detectron/imNetPretrained/FBResNeXt/X-101-64x4d.pkl): converted copy of FB's original ResNeXt-101-64x4d model trained with Torch7
-- [X-101-32x8d.pkl](https://s3-us-west-2.amazonaws.com/detectron/imNetPretrained/20171220/X-101-32x8d.pkl): ResNeXt-101-32x8d model trained with Caffe2 at FB
-- [X-152-32x8d-IN5k.pkl](https://s3-us-west-2.amazonaws.com/detectron/imNetPretrained/25093814/X-152-32x8d-IN5k.pkl): ResNeXt-152-32x8d model **trained on ImageNet-5k** with Caffe2 at FB (see our [ResNeXt paper](https://arxiv.org/abs/1611.05431) for details on ImageNet-5k)
+- [R-50.pkl](https://s3-us-west-2.amazonaws.com/detectron/ImageNetPretrained/MSRA/R-50.pkl): converted copy of MSRA's original ResNet-50 model
+- [R-101.pkl](https://s3-us-west-2.amazonaws.com/detectron/ImageNetPretrained/MSRA/R-101.pkl): converted copy of MSRA's original ResNet-101 model
+- [X-101-64x4d.pkl](https://s3-us-west-2.amazonaws.com/detectron/ImageNetPretrained/FBResNeXt/X-101-64x4d.pkl): converted copy of FB's original ResNeXt-101-64x4d model trained with Torch7
+- [X-101-32x8d.pkl](https://s3-us-west-2.amazonaws.com/detectron/ImageNetPretrained/20171220/X-101-32x8d.pkl): ResNeXt-101-32x8d model trained with Caffe2 at FB
+- [X-152-32x8d-IN5k.pkl](https://s3-us-west-2.amazonaws.com/detectron/ImageNetPretrained/25093814/X-152-32x8d-IN5k.pkl): ResNeXt-152-32x8d model **trained on ImageNet-5k** with Caffe2 at FB (see our [ResNeXt paper](https://arxiv.org/abs/1611.05431) for details on ImageNet-5k)
+
+#### Log Files
+
+[Training and inference logs](https://s3-us-west-2.amazonaws.com/detectron/logs/model_zoo_12_2017_baseline_logs.tgz) are available for most models in the model zoo.
 
 ## Proposal, Box, and Mask Detection Baselines
 
